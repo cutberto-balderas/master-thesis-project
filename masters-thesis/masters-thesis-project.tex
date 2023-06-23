@@ -10,4 +10,23 @@ toc=listofnumbered]{scrbook}
 
 \begin{document}
     \input{files/title-page}
+
+    \frontmatter
+
+    \pagenumbering{Roman}
+    \dominitoc
+    \dominilof
+    \dominilot
+    
+    \tableofcontents
+    \listoffigures
+    \fakelistoftables
+    
+    \mainmatter
+
+    \input{files/ch1-introduction.tex}
+    \input{files/ch2-theory-aspects.tex}
+    \input{files/ch3-techniques-and-sample.tex}
+    \input{files/ch4-results.tex}
+    \input{files/ch5-conclusions.tex}
 \end{document}
