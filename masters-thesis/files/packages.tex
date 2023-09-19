@@ -1,5 +1,5 @@
 \usepackage[spanish]{babel}
-\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=13.6pt]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=15pt]{geometry}
 \usepackage{miama}
 \usepackage{calligra}
 \usepackage[T1]{fontenc}
@@ -47,6 +47,9 @@
 \usepackage{rotating}
 \usepackage{hyperref}
 \hypersetup{pdfborder=0 0 0}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
 
 %=================================== TOC MINITOC =========================%
 \usepackage[spanish]{minitoc}

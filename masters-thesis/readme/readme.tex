@@ -2,6 +2,9 @@
 
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
 \begin{document}
     \begin{tikzpicture}
@@ -36,6 +39,6 @@
         \node[scale=1.25,anchor=north,yshift=-2mm](supvisor3) at (supvisor2.south){Dr. Jorge Ortega Gallegos};
         \node[scale=1.25,anchor=north,yshift=-2mm](supvisor4) at (supvisor3.south){Dr. José Manuel Flores Camacho};
         \node[scale=1.2,anchor=south,yshift=-30mm](city) at (supvisor3.south) {\textsc{San Luis Potos\'i, S.L.P. M\'exico} };
-        \node[scale=1.2,anchor=north,yshift=0mm](year) at (city.south) {\textsc{\today}};
+        \node[scale=1.2,anchor=north,yshift=0mm](year) at (city.south) {\textsc{\monthyeardate\today}};
     \end{tikzpicture}
 \end{document}
