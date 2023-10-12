@@ -1,4 +1,5 @@
 \chapter{Muestra y técnicas experimentales.}
+
 \label{chap:techniques-and-sample}
 \textit{En este capitulo discutiremos los principales aspectos de la muestra estudiada y las técnicas utilizadas para la caracterización de la misma.}
 \vfill
@@ -11,23 +12,86 @@
 
 \section{Espectroscopia de Reflectancia Diferencial}
 \label{sec:chap3-rds}
-La técnica de Espectroscopia de Reflectancia Diferencial \textbf{(RDS)} es
-utilizada en el estudio de dispositivos y materiales, haciendo uso de la
-\textit{anisotropía}, la cual es la propiedad que describe como un material
-puede tener diferentes respuestas dependiendo de la 
-\\dirección en la que es examinada. En la \textbf{RDS}, se estudia la anisotropía
-óptica del sistema, 
+La técnica de Espectroscopia de Reflectancia Diferencial \textbf{(RDS)} es utilizada en el estudio 
+de dispositivos y materiales, haciendo uso de la \textit{anisotropía}, la cual es la propiedad que 
+describe como un material puede tener diferentes respuestas dependiendo de la dirección en la que es examinada, 
+en este caso se debe a la \textit{anisotropía óptica}, donde observamos los cambios en la respuesta óptica 
+del sistema estudiado, utilizando las propiedades de simetría y la polarización de la luz, para obtener 
+una diferencia en la reflectancia del sistema observándolo de diferentes direcciones.
+
+En el caso de los materiales semiconductores, nos aprovechamos de las propiedades
+de simetría de los cristales observando dos direcciones cristalográficas, se elimina
+la contribución del bulto o el cuerpo principal del semiconductor provocando que sea \textit{isotrópica}, 
+obteniendo que la respuesta dependa solamente la superficie, haciendo que la \textbf{RDS} sea una 
+técnica utilizada para el estudio de superficies.\cite{Aspnes1985} La respuesta o espectro de la 
+\textbf{RDS} tiene la siguiente forma:
+
+\begin{equation}
+    \label{eqn:ch3-rds-eqn}
+    \dfrac{\Delta R}{R} = 2\dfrac{R_{\alpha}-R_{\beta}}{R_{\alpha}+R_{\beta}}
+\end{equation}
+
+Siendo $ \alpha $ y $ \beta $ las direcciones cristalográfica para las cuales se obtuvo la
+reflectancia del material, siendo la diferencia de estos la que nos da la información de solamente la 
+superficie.
+
+*Colocar figura del sistema*
+
+El sistema utilizado para las mediciones tiene como fuente de iluminación una lampara de Xenón la cual es
+enfocada hacia el monocromador con el uso de un arreglo de espejos, del cual sale la luz difractada dirigida a
+otro arreglo de espejos los cuales dirigen la luz a la parte del sistema que controla su polarización, 
+un prisma polarizador y un modulador fotoelástico que al pasar por ellos, obtenemos un haz de luz con 
+una cierta polarización y que se estará modulando entre dos estados perpendiculares entre si, incidiendo sobre 
+la muestra para reflejarse hacia un tubo fotomultiplicador.\cite{LastrasMartnez1993}
 
 \newpage
 
 \section{Espectroscopia Raman}
 \label{sec:chap3-raman}
+La Espectroscopia Raman es una técnica que se aprovecha del \textit{efecto Raman}, el cual describe la interaccion
+entre los fotones, el material que estamos estudiando y la forma en el que este vibra cuando los fotones incidan 
+sobre una molécula, pudiéndose presentándose algún modo vibracional, siendo característico de la muestra, 
+ya que esta estrechamente relacionado con la estructura molecular del material, resultando en la dispersión de 
+fotones con diferentes frecuencias.
+
+Cuando un fotón choca contra una molécula puede ocurrir alguno de los siguientes casos:
+    \begin{itemize}
+        \item Que el resultado sea un choque elástico, queriendo decir que no perderá energía por medio de
+        efectos vibracionales, dando como resultado un fotón dispersado con la misma frecuencia. Esto se conoce 
+        como efecto Rayleigh.
+
+        \item Que el choque resultante sea inelástico, lo que provoca que el fotón dispersado tenga una frecuencia 
+        diferente a la del incidente, teniendo el caso de una mayor frecuencia, provocando una ganancia en la energía 
+        con respecto al incidente y donde el fotón dispersado tiene menor frecuencia que el incidente, indicando que 
+        ocurrió una perdida de la energía por procesos vibracionales. Estos son nombrados efecto Anti-Stokes y efecto 
+        Stokes respectivamente.
+    \end{itemize}
+
+*Colocar figura de diagrama de energía y efecto Rayleigh*
+
+Por consecuencia, el efecto Stokes es utilizado para observar el \textit{efecto Raman}, siendo mas probable que
+este suceda porque sus fotones dispersados tienen una energía menor que su contraparte del efecto Anti-Stokes.
+
+En el caso de los semiconductores, debido a la existencia de la red cristalina, el efecto Raman nos puede dar información 
+sobre la cristalinidad de la muestra, debido a que cada modo vibracional tiene una frecuencia para los fotones dispersados 
+entre estos mas se alejen o apeguen de este valor nos da una noción de que tan cristalina es la muestra. Otra propiedad
+importante es el entender el estrés al que esta sometido la muestra, por el desplazamiento de la respuesta del material 
+en contraste con que no presente estrés.
+
+*Posiblemente colocar diagrama del sistema y descripción*
 \newpage
 
 \section{Microscopia de Fuerza Atómica}
 \label{sec:chap3-afm}
-\newpage
+La Microscopia de Fuerza Atómica (AFM), es una técnica que es capaz de medir la superficie de un material a nivel 
+nanométrico utilizando como principio las fuerzas de interaccion atractivas y repulsivas entre la punta del instrumento 
+con el material. Para que la medición sea correcta, la punta debe tener una terminación en una cantidad de átomos 
+pequeña, que al momento de experimentar una fuerza, esta provocara una deflexión en el cantiléver sobre el cual esta 
+montada.\cite{Binnig1986}
 
+*Insertar imagen punta-muestra Binning*
+*Explicar los diferentes tipos de técnica o usar solo el usado*
+*¿Vale la pena el juntar AFM y NSOM por el equipo usado?*
 \section{Microscopía Óptica de Barrido de Campo Cercano}
 \label{sec:chap3-nsom}
 \newpage
