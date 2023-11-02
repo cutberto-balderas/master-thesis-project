@@ -10,7 +10,8 @@ toc=listofnumbered]{scrbook}
 
 \begin{document}
     \input{files/title-page}
-
+    \input{files/figures.tex}
+    \input{files/arduino.tex}
     \frontmatter
 
     \pagenumbering{Roman}
@@ -19,13 +20,14 @@ toc=listofnumbered]{scrbook}
     \dominilot
     
     \tableofcontents
+    \input{files/abstract.tex}
     \listoffigures
     \fakelistoftables
     
     \mainmatter
 
     \input{files/ch1-introduction.tex}
-    \input{files/ch2-theory-aspects.tex}
+    %\input{files/ch2-instrumentation.tex}
     \input{files/ch3-techniques-and-sample.tex}
     \input{files/ch4-results.tex}
     \input{files/ch5-conclusions.tex}

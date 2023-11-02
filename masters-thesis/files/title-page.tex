@@ -24,23 +24,24 @@
         \node[font=\bfseries,scale=1.25,anchor=north,yshift=-2.75cm](l1) at (current page.north){Universidad Autónoma de San Luis Potosí};
         \node[font=\bfseries,scale=1.25,anchor=north,yshift=0mm](l2) at (l1.south){ Facultad de Ciencias        };
         
-        \node[scale=1.8,font=\bfseries,text width=0.4\textwidth,align=center,anchor=center,yshift=-1.5cm,xshift=0mm](title) at (l2.south){Caracterización de una pelicula de Ag sobre un sustrato de CdTe};
+        \node[scale=1.8,font=\bfseries,text width=0.4\textwidth,align=center,anchor=center,yshift=-1.5cm,xshift=0mm](title) at (l2.south){Estudio de las propiedades superficiales de CdTe y HgCdTe por medio de técnicas ópticas};
         
-        \node[scale=1.5, anchor=north,yshift=-5mm, text width=7cm, align=center](l3) at (title.south)  {\textsc{Tesis}};
-        \node[scale=1.2, anchor=north,yshift=-5mm, text width=7cm, align=center](l4) at (l3.south)  {Que para obtener el grado de \\ Maestro en Ciencias Aplicadas};
-        \node[scale=1.5, anchor=north,yshift=-5mm, text width=7cm, align=center](l5) at (l4.south)  {\textsc{Presenta}};
+        \node[scale=1.5, anchor=north,yshift=-3mm, text width=7cm, align=center](l3) at (title.south)  {\textsc{Tesis}};
+        \node[scale=1.2, anchor=north,yshift=-3mm, text width=7cm, align=center](l4) at (l3.south)  {Que para obtener el grado de \\ Maestro en Ciencias Aplicadas};
+        \node[scale=1.5, anchor=north,yshift=-3mm, text width=7cm, align=center](l5) at (l4.south)  {\textsc{Presenta}};
 
 
         \node[font=\bfseries,scale=1.5,anchor=north,yshift=-8mm](author) at (l5.south){Cutberto Balderas Noyola};
         
-        \node[scale=1.25,anchor=north,yshift=-8mm](supvisors) at (author.south){Asesores};
-        
-        \node[scale=1.25,anchor=north,yshift=-5mm](supvisor1) at (supvisors.south){Dr. Luis Felipe Lastras Mart\'inez};
-        \node[scale=1.25,anchor=north,yshift=-3mm](supvisor2) at (supvisor1.south){Dr. Alfonso Lastras Martínez};
-        \node[scale=1.25,anchor=north,yshift=-2mm](supvisor3) at (supvisor2.south){Dr. Jorge Ortega Gallegos};
-        \node[scale=1.25,anchor=north,yshift=-1mm](supvisor4) at (supvisor3.south){Dr. José Manuel Flores Camacho};
-        \node[scale=1.2,anchor=south,yshift=-30mm](city) at (supvisor3.south) {\textsc{San Luis Potos\'i, S.L.P. M\'exico} };
-        \node[scale=1.2,anchor=north,yshift=0mm](year) at (city.south) {\textsc{\monthyeardate\today}};
+        \node[scale=1.25, anchor=north, yshift=-8mm](supvisors) at (author.south){Asesor};
+        \node[scale=1.25, anchor=north, yshift=-2mm](supvisor1) at (supvisors.south){Dr. Luis Felipe Lastras Mart\'inez};
+       
+        \node[scale=1.25, anchor=north, yshift=-5mm](synodals) at (supvisor1.south){Sinodales};
+        \node[scale=1.25, anchor=north, yshift=-2mm](synodal1) at (synodals.south){Dr. Alfonso Lastras Martínez};
+        \node[scale=1.25, anchor=north, yshift=-2mm](synodal2) at (synodal1.south){Dr. Jorge Ortega Gallegos};
+        \node[scale=1.25, anchor=north, yshift=-2mm](synodal3) at (synodal2.south){Dr. José Manuel Flores Camacho};
+        \node[scale=1.2, anchor=south, yshift=-15mm](city) at (synodal3.south) {\textsc{San Luis Potos\'i, S.L.P. M\'exico} };
+        \node[scale=1.2, anchor=north, yshift=0mm](year) at (city.south) {\textsc{\monthyeardate\today}};
     \end{tikzpicture}
 \end{titlepage}
 

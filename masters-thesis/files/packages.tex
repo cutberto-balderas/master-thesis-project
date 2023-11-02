@@ -1,6 +1,8 @@
 \usepackage[spanish]{babel}
+\usepackage{circuitikz}
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=15pt]{geometry}
 \usepackage{miama}
+\usepackage{subcaption }
 \usepackage{calligra}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -138,7 +140,7 @@
 \renewcommand{\headrule}{\color{black} \headruleORIG}
 \renewcommand{\headrulewidth}{1.0pt}
 \usepackage{colortbl}
-\arrayrulecolor{black}
+\arrayrulecolor{white}
 
 \fancypagestyle{plain}{
   \fancyhead{}
@@ -158,9 +160,6 @@
   \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \makeatother
-
-
-
 
 
 %================================ RENEWs COMMANDS =================================%
@@ -211,3 +210,9 @@
 \newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
+
+\usepackage{typearea}
+\usepackage{color}
+\usepackage{mwe}
+\usepackage{listings}    
+\usepackage{etoolbox}
