@@ -22,12 +22,14 @@ toc=listofnumbered]{scrbook}
     \tableofcontents
     \input{files/abstract.tex}
     \listoffigures
+    \renewcommand\listtablename{Índice de tablas}
+    \listoftables
     \fakelistoftables
     
     \mainmatter
 
     \input{files/ch1-introduction.tex}
-    %\input{files/ch2-instrumentation.tex}
+    \input{files/ch2-instrumentation.tex}
     \input{files/ch3-techniques-and-sample.tex}
     \input{files/ch4-results.tex}
     \input{files/ch5-conclusions.tex}

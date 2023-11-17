@@ -1,5 +1,11 @@
+\usepackage[font=normalsize,labelfont=bf]{caption}
+\captionsetup[table]{name=Tabla}
+\usepackage[font=normalsize,labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage{graphicx}
 \usepackage[spanish]{babel}
 \usepackage{circuitikz}
+\usepackage{tabularx}
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=15pt]{geometry}
 \usepackage{miama}
 \usepackage{subcaption }
@@ -30,14 +36,12 @@
 \usepackage{sistyle}
 %\usepackage[usenames, dvipsnames]{color}
 \usepackage{array}
-\usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{cite}
 \usepackage{microtype}
 \usepackage{enumerate}
 \usepackage{blindtext}
 \usepackage{floatrow}
-\usepackage{booktabs}
 \usepackage{placeins}
 \usepackage{lettrine}
 \usepackage{longtable}
@@ -85,7 +89,7 @@
 \newcommand\boxedSection[3]{{%
 %
 \begin{tikzpicture}[inner sep=#3,line width=1.0pt]
-\node[anchor=east,rectangle,rounded corners=7,draw,fill=black!70!white] at (0,0) (counter) {\color{black}\textbf{#2}};
+\node[anchor=east,rectangle,rounded corners=7,draw,fill=black!70!white] at (0,0) (counter) {\color{white}\textbf{#2}};
 \draw (counter.south)  ++(.0pt,.5pt)-- ++($(\linewidth,0) - (25pt,0)$);
 \draw ([yshift=-0.4mm]counter.north)  ++(.0pt,.5pt)-- ++($(\linewidth,0) - (25pt,0)$);
 \node [right of=counter,anchor=west,yshift=-0.1mm]{#1};
@@ -140,7 +144,7 @@
 \renewcommand{\headrule}{\color{black} \headruleORIG}
 \renewcommand{\headrulewidth}{1.0pt}
 \usepackage{colortbl}
-\arrayrulecolor{white}
+\arrayrulecolor{lightgray}
 
 \fancypagestyle{plain}{
   \fancyhead{}
@@ -201,9 +205,9 @@
 %================================ add page to refs ==================================
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{%
-    \ifcase #1 (Not cited.)%
-    \or        (Cited on page~#2.)%
-    \else      (Cited on pages~#2.)%
+    \ifcase #1 (No citado.)%
+    \or        (Citado en la pagina~#2.)%
+    \else      (Citado en la paginas~#2.)%
     \fi}
 
 \makeatletter
