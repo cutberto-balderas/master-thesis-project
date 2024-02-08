@@ -1,0 +1,30 @@
+Statistical Quantities
+File:                     C:\Users\cutbe\OneDrive\Escritorio\Maestria\Tesis\exp\2022-03-17-afmnsom\Zona 1\CdTe_Ag_2um_512px_med3-Height_T.stp
+Image:                    Topography
+Selected area:            512 × 512 at (0, 0) px
+                          0.000000 × 0.000000 at (0.000000, 0.000000) m
+Mask in use:              No
+
+Average value:            8.6912 nm
+RMS roughness (Sq):       1.74012 nm
+RMS (grain-wise):         1.74012 nm
+Mean roughness (Sa):      1.34270 nm
+Skew (Ssk):               0.126161
+Excess kurtosis:          1.65114
+
+Minimum:                  0.0000 nm
+Maximum:                  28.8789 nm
+Median:                   8.6762 nm
+Maximum peak height (Sp): 20.1877 nm
+Maximum pit depth (Sv):   8.6912 nm
+Maximum height (Sz):      28.8789 nm
+
+Projected area:           4.00000 nm²
+Surface area:             1632.44 nm²
+Surface slope (Sdq):      542.993
+Volume:                   34.7647 nm³
+Variation:                1831.61 nm²
+Inclination θ:            57.60 deg
+Inclination φ:            -137.59 deg
+
+Scan line discrepancy:    0.153505

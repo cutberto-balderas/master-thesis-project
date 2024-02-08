@@ -8,22 +8,23 @@ toc=listofnumbered]{scrbook}
 
 \input{files/packages}
 
+
 \begin{document}
     \input{files/title-page}
-    \input{files/figures.tex}
-    \input{files/arduino.tex}
+    \input{files/figures}
+    \input{files/arduino}
     \frontmatter
 
     \pagenumbering{Roman}
     \dominitoc
     \dominilof
     \dominilot
-    
-    \tableofcontents
+
+    \small\tableofcontents
     \input{files/abstract.tex}
-    \listoffigures
+    \small\listoffigures
     \renewcommand\listtablename{Índice de tablas}
-    \listoftables
+    \small\listoftables
     \fakelistoftables
     
     \mainmatter
