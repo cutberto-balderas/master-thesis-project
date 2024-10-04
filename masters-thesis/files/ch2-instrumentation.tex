@@ -23,7 +23,7 @@ Cabe destacar, que la Fig. \ref{fig:mono_diagram}, es una representación esquem
 
 \section{Electrónica del monocromador HR60}
 \label{sec:ch2-electronic}
-El uso final del monocromador utilizado será el realizar las espectroscopias de \textit{Reflectancia Diferencial} y \textit{Elipsometria}, por lo que este sistema debe estar automatizado en el movimiento de la \textit{rejilla de difracción} y la apertura de las \textit{slits}, por lo que es crucial que estos sean controlados de forma sencilla y eficaz. Para esto, se utilizan \textit{motores a paso o steppermotor} controlados por una \textit{unidad de control} que usualmente es en base a un microcontrolador, la cual procesa la información proporcionada por un PC para controlar el monocromador. 
+El uso final del monocromador utilizado será el realizar las espectroscopias de \textit{Reflectancia Diferencial} y \textit{Elipsometría}, por lo que este sistema debe estar automatizado en el movimiento de la \textit{rejilla de difracción} y la apertura de las \textit{slits}, por lo que es crucial que estos sean controlados de forma sencilla y eficaz. Para esto, se utilizan \textit{motores a paso o steppermotor} controlados por una \textit{unidad de control} que usualmente es en base a un microcontrolador, la cual procesa la información proporcionada por un PC para controlar el monocromador. 
 
 La conexión monocromador-PC se hace utilizando la \textit{comunicación serial} utilizando el protocolo \textit{RS232}, la cual se basa en el envio de información \textit{bit por bit} en un cierto periodo de tiempo. Esto parece una desventaja, porque la transmisión de la información es de baja velocidad, pero al utilizar instrucciones cortas y sencillas, podemos establecer una comunicación eficaz entre los sistemas. Una importante característica, es que podemos aprovechar esta propiedad de \textit{bit por bit}, para simplificar la interpretación de las instrucciones.
 
@@ -43,15 +43,23 @@ El \textit{Driver A4988} y \textit{Adafruit Motor Shield}, son utilizados para e
 \subsection{Motores del monocromador HR60}
 \label{sec:ch2-motors}
 
-Los motores en el monocromador HR60 son los siguientes:
+Los motores pueden ser observados en la Fig. \ref{fig:mono_inside} del monocromador HR60 son los siguientes:
 \begin{itemize}
     \item Motor principal o motor de \textit{rejilla de difracción}. Este es un motor bipolar alimentado por 30 V, el cual hace girar un \textit{tornillo sin fin} donde se encuentra montado la \textit{rejilla de difracción}, obteniendo un espectro de 0-1300 nm, el cual esta limitado por un \textit{limit-switch} al final del sin fin. Este tiene una resolución de paso de 0.1 nm y trabaja en el modo de \textit{half-step}, para mejorar la suavidad en su movimiento.
     \item Slits. El sistema tiene cuatro slits, cada una con un \textit{steppermotor} para el control de la  cantidad de luz en el monocromador, estas tienen un mecanismo de apertura y cierre en un rango de 0-2500 nm. Estas no presentan un sistema para limitar su apertura, por lo que hay que ser cuidadosos al momento de utilizarlas.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chap2/monocromador-inside.jpg}
+        \caption{Fotografía del monocromador mostrando la rejilla de difracción, el motor principal y las slits}
+    \label{fig:mono_inside}
+\end{figure}
+
+
 \section{Diseño del programa de control}
 \label{sec:ch2-control}
-Para diseñar el programa de control del monocromador con base en Arduino, se tomó el programa de control en el \textit{Laboratorio de Elipsometria Espectroscópica, I.I.C.O., U.A.S.L.P} como apoyo. En este se definen algunas secuencias de control para el movimiento del monocromador, esperando una notificación de estado, además del guardado de la posición final del motor principal del sistema y de cada una de sus slits. Entonces para poder realizar la comunicación PC-Monocromador necesitamos lo siguiente:
+Para diseñar el programa de control del monocromador con base en Arduino, se tomó el programa de control en el \textit{Laboratorio de Elipsometría Espectroscópica, I.I.C.O., U.A.S.L.P} como apoyo. En este se definen algunas secuencias de control para el movimiento del monocromador, esperando una notificación de estado, además del guardado de la posición final del motor principal del sistema y de cada una de sus slits. Entonces para poder realizar la comunicación PC-Monocromador necesitamos lo siguiente:
 
 \begin{itemize}
     \item La unidad de control debe tener en su código los primeros valores para inicializar el monocromador, como la resolución y el tamaño de paso deseado.
@@ -66,7 +74,7 @@ Para más detalles, el código completo se encuentra en el Apéndice \ref{append
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.5\textwidth, angle=270]{figures/chap2/monocromador.pdf}
+    \includegraphics[width=1.4\textwidth, angle=270]{figures/chap2/monocromador.pdf}
         \caption{Diagrama de flujo del programa de control del monocromador}
     \label{fig:mono_flow}
 \end{figure}

@@ -92,27 +92,9 @@ La técnica de \textit{AFM}, se clasifica en tres modos de operación, que son l
 
  \begin{figure}[H]
     \centering
-        \begin{tikzpicture}
-
-        \begin{scope}[yshift=1cm,yscale=1]
-            % wall
-            \fill[pattern=north east lines] (3,0) rectangle (3.25,1);
-            \draw (3.25,0) -- (3.25,1);
-            % beam
-            \draw[line width=1mm, gray, solid] (3.25,-1.5) [partial ellipse=90:38:4cm and 2cm];
-            \draw[dashed] (3.25,0.5) -- (6.5,0.5);
-            \draw[|<->|] (6.5,0.5) -- (6.5,-0.16) node[midway,right] {$L$};
-            \node[ducky, rotate=-30] at (6.5,-0.47) {}; 
-        \end{scope}
-
-        \draw[fill=gray!40!black!50!white]
-                {decorate[decoration={jiggly, segment length=0.25,amplitude=0.25}]
-                {decorate[decoration={jiggly, segment length=1,amplitude=1}]
-                {decorate[decoration={jiggly, segment length=4,amplitude=4}]     
-                {(0,0) -- ++(10,0)}}}} -- ++(0,-2cm) -- ++(-10cm,0) -- cycle;
-        \end{tikzpicture}
-        \caption{Diagrama esquemático de la interacción entre el cantiléver y la muestra, donde se observa la deflexión \textit{L}.}
-    \label{fig:afm_diagram}
+    \includegraphics[width=0.5\textwidth]{figures/chap3/beambounce.jpg}
+        \caption{Diagrama esquemático de la punta del AFM y como se utiliza el laser para identificar la posición con un sensor\cite{Nanonics2}.}
+    \label{fig:beambounce}
 \end{figure}
 
 \section{Microscopía Óptica de Campo Cercano}
@@ -120,4 +102,13 @@ La técnica de \textit{AFM}, se clasifica en tres modos de operación, que son l
 
 Una de las desventajas de la Microscopía Óptica es la limitante que presenta el trabajar con luz para observar los objetos, ya que la resolucion del sistema es proporcional a la longitud de onda utilizada. Cuando la muestra y la longitud de onda sean comparables en tamaño, entramos en el \textit{límite de difracción}, donde la resolución del sistema no permite distinguir los detalles del objeto observado ya que en estas condiciones la luz que usamos para iluminar es difractada.
 
-Una de las formas para sobrepasar este limite teórico, es utilizando la Microscopía Óptica de Campo Cercano (NSOM), donde se utiliza luz para observar los objetos, pero dentro del régimen de \textit{campo cercano},
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/chap3/nsom_sq.png}
+        \caption{Diagrama esquemático del sistema NSOM\cite{Nanonics1}.}
+    \label{fig:Nanonics}
+\end{figure}
+
+Una de las formas para sobrepasar este limite teórico, es utilizando la Microscopía Óptica de Campo Cercano (NSOM), donde se utiliza luz para observar los objetos, pero dentro del régimen de \textit{campo cercano}, donde es posible visualizar estructuras de tamaño comparable a la longitud de onda sin los problemas del límite de difracción, además que nos puede proporcionar propiedades interesantes del material ópticas y físicas.
+
+Para censar, esta técnica utiliza una fuente de luz muy cercana a la superficie la cual tiene que estar en el redimen de campo cercano, y con el uso de piezoeléctricos realiza un barrido de ida y regreso (es configuración mas común). Usualmente esta técnica se realiza en paralelo con AFM.
